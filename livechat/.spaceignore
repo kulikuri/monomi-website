@@ -1,0 +1,58 @@
+# Hugging Face Space - Files to ignore
+
+# Node modules (will be installed on HF)
+node_modules/
+
+# Local environment files
+.env.local
+.env.development
+.env.test
+
+# Database (use persistent storage on HF)
+database/*.db
+database/*.db-journal
+database/*.db-wal
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local dev files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Git files
+.git/
+.gitignore
+
+# Documentation (optional, include if you want)
+# *.md
+
+# Setup scripts (not needed on HF)
+setup-ollama*.bat
+install-ollama*.bat
+start-ollama*.bat
+start-all.bat
+pull-model*.bat
+
+# Docker compose (HF uses Dockerfile only)
+docker-compose*.yml
+
+# Local configuration
+.claude/

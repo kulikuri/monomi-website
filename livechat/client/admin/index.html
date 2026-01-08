@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiMax Admin Dashboard - Live Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal active">
+        <div class="modal-content">
+            <div class="login-header">
+                <h2>DigiMax Admin Login</h2>
+                <p>Access your live chat dashboard</p>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required placeholder="admin@digimax.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-sign-in-alt"></i>
+                    Login
+                </button>
+            </form>
+            <div id="loginError" class="error-message"></div>
+        </div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboard" class="dashboard">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1><i class="fas fa-comments"></i> DigiMax Live Chat</h1>
+                <div class="status-indicator">
+                    <span class="status-dot online"></span>
+                    <span>Online</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="admin-info">
+                    <span id="adminName">Admin</span>
+                    <button id="logoutBtn" class="btn-logout">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="dashboard-main">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" id="onlineUsersCount">0</span>
+                            <span class="stat-label">Online Users</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-number" id="totalConversations">0</span>
+                            <span class="stat-label">Conversations</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conversations-section">
+                    <div class="section-header">
+                        <h3>Conversations</h3>
+                        <button id="refreshBtn" class="btn-refresh">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                    <div id="conversationsList" class="conversations-list">
+                        <!-- Conversations will be loaded here -->
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Chat Area -->
+            <main class="chat-area">
+                <div id="welcomeScreen" class="welcome-screen">
+                    <div class="welcome-content">
+                        <i class="fas fa-comments-dollar"></i>
+                        <h2>Welcome to DigiMax Live Chat</h2>
+                        <p>Select a conversation from the sidebar to start chatting with customers</p>
+                        <div class="welcome-stats">
+                            <div class="welcome-stat">
+                                <strong>Real-time</strong>
+                                <span>Instant messaging</span>
+                            </div>
+                            <div class="welcome-stat">
+                                <strong>Multi-user</strong>
+                                <span>Handle multiple chats</span>
+                            </div>
+                            <div class="welcome-stat">
+                                <strong>Professional</strong>
+                                <span>Business-ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="chatScreen" class="chat-screen hidden">
+                    <!-- Chat Header -->
+                    <div class="chat-header">
+                        <div class="chat-user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="user-details">
+                                <h3 id="chatUserName">Customer</h3>
+                                <p id="chatUserStatus">Online</p>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button id="closeChatBtn" class="btn-secondary">
+                                <i class="fas fa-times"></i>
+                                Close Chat
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Messages Area -->
+                    <div id="messagesContainer" class="messages-container">
+                        <!-- Messages will be loaded here -->
+                    </div>
+
+                    <!-- Typing Indicator -->
+                    <div id="typingIndicator" class="typing-indicator hidden">
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="typing-text">Customer is typing...</span>
+                    </div>
+
+                    <!-- Message Input -->
+                    <div class="message-input-area">
+                        <form id="messageForm">
+                            <div class="input-group">
+                                <textarea 
+                                    id="messageInput" 
+                                    placeholder="Type your message..." 
+                                    rows="1"
+                                ></textarea>
+                                <button type="submit" class="btn-send">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

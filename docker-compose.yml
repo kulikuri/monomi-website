@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  mainsite:
+    build: .
+    container_name: digimax-mainsite
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    networks:
+      - porto-network
+
+  ollama:
+    image: ollama/ollama:latest
+    container_name: digimax-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+    networks:
+      - porto-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 45s
+
+  livechat:
+    build: ./livechat
+    container_name: digimax-livechat
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - OLLAMA_URL=http://ollama:11434
+    volumes:
+      - ./livechat/logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - porto-network
+    depends_on:
+      - ollama
+    healthcheck:
+      test: ["CMD", "node", "-e", "const http = require('http'); const options = { hostname: 'localhost', port: 3000, path: '/health', timeout: 2000 }; const req = http.request(options, (res) => { if (res.statusCode === 200) process.exit(0); else process.exit(1); }); req.on('error', () => process.exit(1)); req.end();"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  porto-network:
+    driver: bridge
+
+volumes:
+  ollama-data:
+    driver: local

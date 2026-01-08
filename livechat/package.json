@@ -1,0 +1,44 @@
+{
+  "name": "livechat-system",
+  "version": "1.0.0",
+  "description": "Real-time live chat system for social media agency",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js",
+    "dev": "nodemon server/app.js",
+    "start:admin": "node server/admin-server.js",
+    "start:visitor": "node server/visitor-server.js",
+    "start:split": "concurrently \"npm run start:admin\" \"npm run start:visitor\"",
+    "dev:admin": "nodemon server/admin-server.js",
+    "dev:visitor": "nodemon server/visitor-server.js",
+    "dev:split": "concurrently \"npm run dev:admin\" \"npm run dev:visitor\"",
+    "seed:kb": "node server/scripts/seedKnowledgeBase.js"
+  },
+  "dependencies": {
+    "@huggingface/inference": "^4.13.5",
+    "axios": "^1.13.2",
+    "bcrypt": "^5.1.0",
+    "chromadb": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.10.0",
+    "express-session": "^1.17.3",
+    "helmet": "^7.0.0",
+    "socket.io": "^4.7.2",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.1"
+  },
+  "keywords": [
+    "livechat",
+    "socket.io",
+    "real-time",
+    "chat"
+  ],
+  "author": "DigiMax Agency",
+  "license": "MIT"
+}

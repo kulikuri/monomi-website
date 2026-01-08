@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  admin-server:
+    build: .
+    container_name: digimax-admin
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - ADMIN_PORT=3000
+    volumes:
+      - ./database:/app/database
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - livechat-network
+    command: ["node", "server/admin-server.js"]
+    healthcheck:
+      test: ["CMD", "node", "-e", "const http = require('http'); const options = { hostname: 'localhost', port: 3000, path: '/health', timeout: 2000 }; const req = http.request(options, (res) => { if (res.statusCode === 200) process.exit(0); else process.exit(1); }); req.on('error', () => process.exit(1)); req.end();"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  visitor-server:
+    build: .
+    container_name: digimax-visitor
+    ports:
+      - "8081:8080"
+    environment:
+      - NODE_ENV=production
+      - VISITOR_PORT=8080
+    volumes:
+      - ./database:/app/database
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - livechat-network
+    command: ["node", "server/visitor-server.js"]
+    healthcheck:
+      test: ["CMD", "node", "-e", "const http = require('http'); const options = { hostname: 'localhost', port: 8080, path: '/health', timeout: 2000 }; const req = http.request(options, (res) => { if (res.statusCode === 200) process.exit(0); else process.exit(1); }); req.on('error', () => process.exit(1)); req.end();"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  livechat-network:
+    driver: bridge
+
+volumes:
+  database-data:
+  logs-data:

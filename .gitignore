@@ -1,0 +1,50 @@
+# Claude Code related files
+.claude/
+*.claude.md
+claude_code_prompt.md
+CLAUDE_*
+
+# Node modules
+node_modules/
+livechat/node_modules/
+
+# Environment variables
+.env
+livechat/.env
+
+# Logs
+logs/
+*.log
+livechat/logs/
+
+# Database files
+*.db
+*.db-journal
+livechat/database/*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Build files
+dist/
+build/
+
+# Docker volumes
+docker-video-project/
+
+# Backup files
+*_backup.md
+nul

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing & Content Agency</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Website Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>DigiMax</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            
+            <!-- Mobile Sidebar Menu -->
+            <div class="mobile-sidebar">
+                <div class="sidebar-header">
+                    <h2>DigiMax</h2>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#home" class="sidebar-link">Home</a>
+                    <a href="#services" class="sidebar-link">Services</a>
+                    <a href="#portfolio" class="sidebar-link">Portfolio</a>
+                    <a href="#about" class="sidebar-link">About</a>
+                </nav>
+                <div class="sidebar-cta">
+                    <a href="#services" class="btn-primary">Get Free Consultation</a>
+                    <a href="#portfolio" class="btn-secondary">View Our Work</a>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay"></div>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-video">
+                <!-- Placeholder to see gradient fade -->
+                <div class="video-placeholder">
+                    <div class="placeholder-pattern"></div>
+                </div>
+                <!-- <video autoplay muted loop playsinline>
+                    <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+                    <div class="video-fallback"></div>
+                </video> -->
+                <div class="hero-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-text-wrapper">
+                    <h1 class="reveal-left">Grow Your Business with<br>Professional Digital Marketing</h1>
+                    <p class="reveal-left stagger-1">We help brands achieve remarkable growth through proven digital marketing strategies, quality content creation, and data-driven campaigns that deliver exceptional ROI.</p>
+                    
+                    <div class="hero-buttons reveal-left stagger-2">
+                        <a href="#services" class="btn-primary">
+                            <span>Get Free Consultation</span>
+                        </a>
+                        <a href="#portfolio" class="btn-secondary">
+                            <span>View Our Work</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Our Services</h2>
+                    <p>Comprehensive digital marketing solutions to accelerate your business growth</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card reveal stagger-1">
+                        <div class="service-header">
+                            <h3>Digital Marketing</h3>
+                        </div>
+                        <p>Complete digital marketing strategies including SEO, SEM, social media marketing, and performance advertising that drive high conversions.</p>
+                        <ul class="service-features">
+                            <li>SEO Optimization</li>
+                            <li>Google Ads Management</li>
+                            <li>Social Media Advertising</li>
+                            <li>Performance Analytics</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span class="price">Starting at $2,500/month</span>
+                            <button class="btn-outline">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card reveal stagger-2">
+                        <div class="service-header">
+                            <h3>Content Creation</h3>
+                        </div>
+                        <p>Creative and engaging content for all platforms - from social media posts to viral videos that boost brand awareness and engagement.</p>
+                        <ul class="service-features">
+                            <li>Video Production</li>
+                            <li>Graphic Design</li>
+                            <li>Copywriting</li>
+                            <li>Brand Storytelling</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span class="price">Starting at $1,500/month</span>
+                            <button class="btn-outline">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card reveal stagger-3">
+                        <div class="service-header">
+                            <h3>Brand Strategy</h3>
+                        </div>
+                        <p>Strategic brand positioning and messaging that differentiates your business in the competitive marketplace.</p>
+                        <ul class="service-features">
+                            <li>Brand Identity Development</li>
+                            <li>Market Research</li>
+                            <li>Competitor Analysis</li>
+                            <li>Brand Guidelines</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span class="price">Starting at $5,000/project</span>
+                            <button class="btn-outline">Learn More</button>
+                        </div>
+                    </div>
+
+                    <div class="service-card reveal stagger-4">
+                        <div class="service-header">
+                            <h3>Analytics & Insights</h3>
+                        </div>
+                        <p>Deep data analysis and performance tracking to optimize your marketing efforts and maximize business ROI.</p>
+                        <ul class="service-features">
+                            <li>Performance Reporting</li>
+                            <li>ROI Tracking</li>
+                            <li>Data Analysis</li>
+                            <li>Growth Recommendations</li>
+                        </ul>
+                        <div class="service-cta">
+                            <span class="price">Starting at $1,000/month</span>
+                            <button class="btn-outline">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services-cta reveal">
+                    <h3>Need a custom package?</h3>
+                    <p>Discuss your digital marketing needs with our expert team</p>
+                    <button class="btn-primary">Schedule Consultation</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Separator -->
+        <div class="section-separator"></div>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Portfolio Kami</h2>
+                    <p>Lihat hasil kerja kami yang telah membantu klien mencapai target bisnis</p>
+                </div>
+
+                <div class="portfolio-filter reveal">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="social-media">Social Media</button>
+                    <button class="filter-btn" data-filter="website">Website</button>
+                    <button class="filter-btn" data-filter="ads">Advertising</button>
+                    <button class="filter-btn" data-filter="branding">Branding</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-card instagram-style reveal stagger-1" data-category="social-media">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">📱</div>
+                            <div class="portfolio-overlay">
+                                <button class="view-btn">👁️ Lihat Detail</button>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Social Media Campaign - F&B Brand</h3>
+                            <p>Meningkatkan engagement rate hingga 350% dan follower growth 45%</p>
+                            <div class="portfolio-stats">
+                                <span class="stat">350% Engagement ↗️</span>
+                                <span class="stat">45% Follower Growth 📈</span>
+                            </div>
+                            <div class="portfolio-tags">
+                                <span class="tag">Instagram</span>
+                                <span class="tag">TikTok</span>
+                                <span class="tag">Content Strategy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card instagram-style reveal stagger-2" data-category="website">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">💻</div>
+                            <div class="portfolio-overlay">
+                                <button class="view-btn">👁️ Lihat Detail</button>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>E-commerce Website - Fashion Brand</h3>
+                            <p>Redesign website yang meningkatkan conversion rate hingga 280%</p>
+                            <div class="portfolio-stats">
+                                <span class="stat">280% Conversion ↗️</span>
+                                <span class="stat">65% Page Speed 🚀</span>
+                            </div>
+                            <div class="portfolio-tags">
+                                <span class="tag">Web Design</span>
+                                <span class="tag">UX/UI</span>
+                                <span class="tag">E-commerce</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card instagram-style reveal stagger-3" data-category="ads">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">🎯</div>
+                            <div class="portfolio-overlay">
+                                <button class="view-btn">👁️ Lihat Detail</button>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Google Ads Campaign - Tech Startup</h3>
+                            <p>Kampanye Google Ads yang menghasilkan ROAS 400% dalam 3 bulan</p>
+                            <div class="portfolio-stats">
+                                <span class="stat">400% ROAS 💰</span>
+                                <span class="stat">120% Lead Generation 📊</span>
+                            </div>
+                            <div class="portfolio-tags">
+                                <span class="tag">Google Ads</span>
+                                <span class="tag">PPC</span>
+                                <span class="tag">Lead Generation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-card instagram-style reveal stagger-4" data-category="branding">
+                        <div class="portfolio-image">
+                            <div class="image-placeholder">🎨</div>
+                            <div class="portfolio-overlay">
+                                <button class="view-btn">👁️ Lihat Detail</button>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Complete Rebranding - Local Restaurant</h3>
+                            <p>Rebranding lengkap yang meningkatkan brand awareness 200%</p>
+                            <div class="portfolio-stats">
+                                <span class="stat">200% Brand Awareness ↗️</span>
+                                <span class="stat">150% Customer Retention 💯</span>
+                            </div>
+                            <div class="portfolio-tags">
+                                <span class="tag">Logo Design</span>
+                                <span class="tag">Brand Identity</span>
+                                <span class="tag">Marketing Collateral</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-cta reveal">
+                    <h3>Tertarik dengan hasil seperti ini? 🤩</h3>
+                    <p>Diskusikan project Anda dengan tim expert kami sekarang!</p>
+                    <button class="btn-primary">📞 Hubungi Kami Sekarang</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Separator -->
+        <div class="section-separator"></div>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text reveal-left">
+                        <h2>About Us</h2>
+                        <p>We are a dynamic digital marketing agency focused on helping businesses thrive in the digital landscape. With years of experience in content creation, strategic marketing, and brand development, we deliver results that matter.</p>
+                        <p>Our team combines creativity with data-driven approaches to create campaigns that not only look great but perform exceptionally well.</p>
+                        <div class="stats">
+                            <div class="stat reveal stagger-1">
+                                <h3>50+</h3>
+                                <p>Successful Projects</p>
+                            </div>
+                            <div class="stat reveal stagger-2">
+                                <h3>25+</h3>
+                                <p>Happy Clients</p>
+                            </div>
+                            <div class="stat reveal stagger-3">
+                                <h3>3+</h3>
+                                <p>Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image reveal-right">
+                        <div class="placeholder-image"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Digital Marketing Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <!-- DigiMax Live Chat Widget -->
+    <style>
+        /* Force reload email form styles */
+        #digimax-email-form {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            z-index: 10001;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            display: none;
+        }
+        #digimax-email-form h4 {
+            margin: 0 0 12px 0;
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        #digimax-email-form input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 12px;
+            outline: none;
+            box-sizing: border-box;
+        }
+        #digimax-email-form input:focus {
+            border-color: #667eea;
+        }
+        #digimax-email-form .form-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        #digimax-email-form button {
+            flex: 1;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        #digimax-email-form .btn-start {
+            background: #667eea;
+            color: white;
+        }
+        #digimax-email-form .btn-skip {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+    </style>
+    
+    <div id="digimax-email-form">
+        <h4>👋 Welcome! Let's get started</h4>
+        <input type="email" id="visitor-email-input" placeholder="Your email (optional)">
+        <input type="text" id="visitor-name-input" placeholder="Your name (optional)">
+        <div class="form-buttons">
+            <button class="btn-start" id="start-chat-btn">Start Chat</button>
+            <button class="btn-skip" id="skip-email-btn">Skip</button>
+        </div>
+    </div>
+    
+    <script>
+        window.DIGIMAX_CHAT_URL = 'http://localhost:3000';
+        window.VISITOR_EMAIL = null;
+        window.VISITOR_NAME = null;
+        
+        // Show email form when chat is opened
+        document.addEventListener('DOMContentLoaded', function() {
+            const emailForm = document.getElementById('digimax-email-form');
+            const startBtn = document.getElementById('start-chat-btn');
+            const skipBtn = document.getElementById('skip-email-btn');
+            const emailInput = document.getElementById('visitor-email-input');
+            const nameInput = document.getElementById('visitor-name-input');
+            
+            function startChat() {
+                window.VISITOR_EMAIL = emailInput.value.trim() || null;
+                window.VISITOR_NAME = nameInput.value.trim() || null;
+                emailForm.style.display = 'none';
+                
+                // Trigger original widget
+                const event = new CustomEvent('digimaxStartChat', {
+                    detail: {
+                        email: window.VISITOR_EMAIL,
+                        name: window.VISITOR_NAME
+                    }
+                });
+                window.dispatchEvent(event);
+            }
+            
+            startBtn.addEventListener('click', startChat);
+            skipBtn.addEventListener('click', startChat);
+            
+            // Show form when chat button is clicked
+            window.addEventListener('digimaxShowEmailForm', function() {
+                emailForm.style.display = 'block';
+            });
+        });
+    </script>
+    <script src="http://localhost:3000/public/embed.js?v=9"></script>
+</body>
+</html>

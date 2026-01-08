@@ -1,0 +1,134 @@
+{
+  "documents": [
+    {
+      "id": "kb_000_greeting_id",
+      "question": "halo",
+      "answer": "Halo! Selamat datang di DigiMax. Saya adalah asisten AI yang siap membantu Anda. Ada yang bisa saya bantu terkait layanan digital marketing kami?",
+      "metadata": {
+        "category": "greeting",
+        "tags": ["greeting", "hello", "hi", "halo", "hai", "helo"],
+        "language": "id"
+      }
+    },
+    {
+      "id": "kb_000_greeting_en",
+      "question": "hello",
+      "answer": "Hello! Welcome to DigiMax. I'm an AI assistant here to help you. How can I assist you with our digital marketing services today?",
+      "metadata": {
+        "category": "greeting",
+        "tags": ["greeting", "hello", "hi", "hey"],
+        "language": "en"
+      }
+    },
+    {
+      "id": "kb_000_help",
+      "question": "apa yang bisa kamu bantu",
+      "answer": "Saya bisa membantu Anda dengan informasi tentang DigiMax seperti: jam operasional, layanan yang kami tawarkan (SEO, social media marketing, web design), harga, cara menghubungi kami, dan berbagai pertanyaan lain tentang digital marketing. Silakan tanya apa saja!",
+      "metadata": {
+        "category": "help",
+        "tags": ["help", "bantuan", "assistance", "what can you do"],
+        "language": "id"
+      }
+    },
+    {
+      "id": "kb_001",
+      "question": "Apa jam operasional DigiMax?",
+      "answer": "DigiMax beroperasi Senin-Jumat, pukul 9 pagi hingga 6 sore WIB. Asisten AI kami tersedia 24/7 untuk menjawab pertanyaan dasar!",
+      "metadata": {
+        "category": "business_info",
+        "tags": ["hours", "availability", "schedule", "jam", "operasional"],
+        "language": "id"
+      }
+    },
+    {
+      "id": "kb_002",
+      "question": "Layanan apa saja yang ditawarkan DigiMax?",
+      "answer": "DigiMax menawarkan berbagai layanan digital marketing: SEO optimization, social media marketing, web design, content creation, dan digital advertising. Kami juga menyediakan layanan konsultasi strategi digital. Layanan mana yang Anda minati?",
+      "metadata": {
+        "category": "services",
+        "tags": ["services", "offerings", "products", "layanan"],
+        "language": "id"
+      }
+    },
+    {
+      "id": "kb_003",
+      "question": "Berapa harga layanan DigiMax?",
+      "answer": "Harga kami bervariasi tergantung kebutuhan spesifik Anda. Untuk mendapatkan penawaran yang akurat, saya dapat menghubungkan Anda dengan tim sales kami. Apakah Anda ingin berbicara dengan agen untuk mendapatkan penawaran detail?",
+      "metadata": {
+        "category": "pricing",
+        "tags": ["price", "cost", "quote", "harga", "biaya"],
+        "language": "id"
+      }
+    },
+    {
+      "id": "kb_004",
+      "question": "Bagaimana cara menghubungi DigiMax?",
+      "answer": "Anda dapat menghubungi kami melalui email di support@digimax.com atau telepon di (555) 123-4567. Anda juga bisa terus chat di sini dengan asisten AI kami atau meminta bantuan agen manusia!",
+      "metadata": {
+        "category": "contact",
+        "tags": ["contact", "email", "phone", "kontak", "hubungi"],
+        "language": "id"
+      }
+    },
+    {
+      "id": "kb_005",
+      "question": "Apa itu SEO dan mengapa penting?",
+      "answer": "SEO (Search Engine Optimization) adalah proses optimasi website agar muncul di peringkat atas hasil pencarian Google. Ini penting karena meningkatkan visibilitas website Anda, mendatangkan traffic organik, dan membantu bisnis Anda ditemukan oleh calon pelanggan. DigiMax menyediakan layanan SEO lengkap mulai dari riset keyword hingga link building.",
+      "metadata": {
+        "category": "services_detail",
+        "tags": ["seo", "search", "optimization", "google"],
+        "language": "id"
+      }
+    },
+    {
+      "id": "kb_006",
+      "question": "Apakah DigiMax melayani klien di luar kota?",
+      "answer": "Ya, DigiMax melayani klien di seluruh Indonesia dan juga internasional! Sebagian besar pekerjaan digital marketing kami dapat dilakukan secara remote. Kami sudah berpengalaman menangani klien dari berbagai kota dan negara.",
+      "metadata": {
+        "category": "business_info",
+        "tags": ["location", "remote", "service area", "lokasi"],
+        "language": "id"
+      }
+    },
+    {
+      "id": "kb_007",
+      "question": "Berapa lama waktu yang dibutuhkan untuk melihat hasil dari layanan SEO?",
+      "answer": "Hasil SEO biasanya mulai terlihat dalam 3-6 bulan, tergantung pada kompetisi keyword dan kondisi website saat ini. SEO adalah investasi jangka panjang yang memberikan hasil sustainable. Kami memberikan laporan bulanan untuk tracking progress Anda.",
+      "metadata": {
+        "category": "services_detail",
+        "tags": ["seo", "timeline", "results", "waktu"],
+        "language": "id"
+      }
+    },
+    {
+      "id": "kb_008",
+      "question": "What is social media marketing?",
+      "answer": "Social media marketing involves creating and sharing content on social media platforms to achieve your marketing goals. This includes posting text, images, videos, and running paid ads on platforms like Instagram, Facebook, LinkedIn, and Twitter. DigiMax helps businesses build their brand presence and engage with their audience effectively.",
+      "metadata": {
+        "category": "services_detail",
+        "tags": ["social media", "marketing", "smm", "instagram", "facebook"],
+        "language": "en"
+      }
+    },
+    {
+      "id": "kb_009",
+      "question": "What are DigiMax's business hours?",
+      "answer": "DigiMax operates Monday to Friday, 9 AM to 6 PM WIB (Western Indonesian Time). Our AI assistant is available 24/7 to answer basic questions, and you can request to speak with a human agent during business hours!",
+      "metadata": {
+        "category": "business_info",
+        "tags": ["hours", "availability", "schedule", "time"],
+        "language": "en"
+      }
+    },
+    {
+      "id": "kb_010",
+      "question": "Apakah DigiMax menyediakan paket custom atau hanya paket standard?",
+      "answer": "Kami menyediakan kedua opsi! DigiMax memiliki paket standard untuk usaha kecil dan menengah, serta paket custom yang disesuaikan dengan kebutuhan spesifik bisnis Anda. Paket custom cocok untuk enterprise atau bisnis dengan kebutuhan khusus. Kami dapat mendiskusikan opsi terbaik untuk Anda.",
+      "metadata": {
+        "category": "services",
+        "tags": ["packages", "custom", "pricing", "paket"],
+        "language": "id"
+      }
+    }
+  ]
+}

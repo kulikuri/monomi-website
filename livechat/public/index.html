@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiMax Live Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Chat Widget Container -->
+    <div id="livechat-widget">
+        <!-- Chat Button -->
+        <div id="chat-button" class="chat-button">
+            <div class="button-icon">
+                <i class="fas fa-comments"></i>
+            </div>
+            <div class="button-text">
+                <span>Need Help?</span>
+                <small>Chat with us</small>
+            </div>
+        </div>
+
+        <!-- Chat Window -->
+        <div id="chat-window" class="chat-window">
+            <!-- Header -->
+            <div class="chat-header">
+                <div class="header-info">
+                    <div class="company-avatar">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="company-details">
+                        <h3>DigiMax Support</h3>
+                        <span class="status" id="status-indicator">
+                            <span class="status-dot"></span>
+                            Online
+                        </span>
+                    </div>
+                </div>
+                <button id="minimize-btn" class="minimize-btn">
+                    <i class="fas fa-minus"></i>
+                </button>
+            </div>
+
+            <!-- Welcome Screen -->
+            <div id="welcome-screen" class="welcome-screen">
+                <div class="welcome-content">
+                    <div class="welcome-avatar">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>👋 Hello there!</h3>
+                    <p>We're here to help! Start a conversation with our team.</p>
+                    
+                    <form id="start-chat-form" class="start-chat-form">
+                        <div class="form-group">
+                            <input type="text" id="visitor-name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="visitor-email" placeholder="Email (optional)">
+                        </div>
+                        <button type="submit" class="btn-start-chat">
+                            <i class="fas fa-paper-plane"></i>
+                            Start Chat
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Chat Interface -->
+            <div id="chat-interface" class="chat-interface hidden">
+                <!-- Messages Area -->
+                <div id="messages-area" class="messages-area">
+                    <div class="initial-message">
+                        <div class="message agent">
+                            <div class="message-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div class="message-content">
+                                <div class="message-bubble">
+                                    Hi! I'm here to help you. How can I assist you today?
+                                </div>
+                                <div class="message-time">Just now</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Typing Indicator -->
+                <div id="typing-indicator" class="typing-indicator hidden">
+                    <div class="message agent">
+                        <div class="message-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="message-content">
+                            <div class="typing-bubble">
+                                <div class="typing-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message Input -->
+                <div class="message-input">
+                    <form id="message-form">
+                        <div class="input-container">
+                            <input type="text" id="message-input" placeholder="Type your message..." autocomplete="off">
+                            <button type="submit" class="send-button">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Powered By -->
+                <div class="powered-by">
+                    <small>Powered by <strong>DigiMax</strong> Live Chat</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
